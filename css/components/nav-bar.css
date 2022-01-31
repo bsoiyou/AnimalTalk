@@ -3,8 +3,8 @@
   bottom: 0px;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px 40px;
-  background-color: #f9f9fa;
+  padding: 15px 30px;
+  background-color: rgb(255, 241, 180);
   border-top: 1px solid #dededf;
   color: #494949;
   font-size: 12px;
@@ -33,8 +33,8 @@
 
 .nav__notification {
   position: absolute;
-  top: -20px;
-  right: -10px;
+  top: -25px;
+  right: -12px;
   animation: notificationAnimation 1s ease-in-out infinite;
 }
 
@@ -44,8 +44,8 @@
   width: 7px;
   height: 7px;
   position: absolute;
-  top: -13px;
-  right: -7px;
+  top: -23px;
+  right: -5px;
 }
 
 @keyframes navBtnAnimation {
@@ -72,4 +72,10 @@
 }
 .nav__btn:last-child {
   animation-delay: 0.3s;
+}
+
+.nav .welcome-header__icon {
+  width: 30px;
+  height: 30px;
+  opacity: 70%;
 }

@@ -7,15 +7,22 @@
 }
 
 .welcome-header__title {
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 32px;
   margin-bottom: 30px;
 }
 
-.welcome-header__text {
+.welcome-header__image {
   width: 70%;
-  font-size: 15px;
-  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-header__icon {
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px;
 }
 
 #login-form {
@@ -27,8 +34,10 @@
   border: none;
   font-size: 15px;
   margin: 10px 20px;
-  padding: 15px 0px;
+  padding: 15px 10px;
   font-size: 20px;
+  background-color: rgb(234, 245, 255);
+  border-radius: 20px;
 }
 
 #login-form input::placeholder {
@@ -41,11 +50,11 @@
 }
 
 #login-form input:focus {
-  border-color: var(--yellow);
+  border-color: rgb(94, 169, 255);
 }
 
 #login-form input[type="submit"] {
-  background-color: var(--yellow);
+  background-color: rgb(255, 230, 121);
   margin-top: 25px;
   border-radius: 5px;
   padding: 10px 0px;

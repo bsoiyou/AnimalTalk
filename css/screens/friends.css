@@ -1,18 +1,3 @@
-#friends-display-link {
-  background-color: #fafafa;
-  display: block;
-  text-align: center;
-  padding: 15px 0px;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  margin-top: -10px;
-}
-
-#friends-display-link i {
-  color: rgba(0, 0, 0, 0.2);
-}
-
 .freinds-screen__channel-header {
   border-top: var(--main-border);
   padding: 15px 0px;
@@ -36,17 +21,44 @@
   }
 }
 
+@keyframes splashAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 #splash-screen {
-  background-color: var(--yellow);
+  background-color: var(--bg-color);
   position: absolute;
   top: 0px;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
   animation: hideSplashScreen 0.3s ease-in-out forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
   z-index: 90;
+}
+
+#splash-screen .welcome-header__icon {
+  margin-top: -120px;
+  transform: translateY(40px);
+  opacity: 0;
+  animation: splashAnimation 1s ease-in-out forwards;
+}
+
+#splash-screen .welcome-header__icon:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#splash-screen .welcome-header__icon:nth-child(3) {
+  animation-delay: 0.2s;
+}
+#splash-screen .welcome-header__icon:last-child {
+  animation-delay: 0.3s;
 }

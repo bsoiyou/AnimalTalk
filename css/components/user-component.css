@@ -44,16 +44,22 @@
 }
 
 .user-component__title-not-bold {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 400;
 }
 
 .user-component__column:last-child {
   color: rgba(0, 0, 0, 0.5);
-  font-size: 17px;
+  font-size: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.user-component__msg {
+  border-bottom: 1px solid rgb(199, 199, 199);
+  padding: 5px 10px;
+  font-size: 10px;
 }
 
 .user-component__time {
@@ -66,4 +72,12 @@
   display: flex;
   align-items: center;
   width: 200px;
+}
+
+.user-component--friends {
+  margin-bottom: 15px;
+}
+
+.user-component__subtitle--black {
+  color: black;
 }

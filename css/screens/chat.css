@@ -1,15 +1,15 @@
 .chat-screen {
-  background-color: #abc1d1;
+  background-color: var(--bg-color);
   height: 1000vh;
 }
 
 .chat-screen .status-bar {
-  background-color: #abc1d1;
+  background-color: var(--bg-color);
   z-index: 2;
 }
 
 .chat-screen .alt-screen-header {
-  background-color: #abc1d1;
+  background-color: var(--bg-color);
   position: fixed;
   width: 100%;
   box-sizing: border-box;
@@ -43,12 +43,31 @@
   }
 }
 
+@keyframes moveMsgAnimation {
+  from {
+    opacity: 0;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.message-row--new {
+  opacity: 0;
+  animation: moveMsgAnimation 0.7s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
 .main-chat {
   height: 100%;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main-chat:not(.message-row--new) {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
@@ -97,7 +116,6 @@
   font-size: 13px;
   background-color: white;
   padding: 5px 10px;
-  padding-bottom: 8px;
   border-radius: 20px;
   border-top-left-radius: 0px;
 }
@@ -125,7 +143,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 241, 180);
   padding: 7px 15px;
   box-sizing: border-box;
   transition: transform 0.2s ease-in-out;
@@ -166,7 +184,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--yellow);
+  background-color: rgb(255, 230, 121);
   padding: 8px;
   border: none;
   top: 0px;
